@@ -1,3 +1,3 @@
 # Oniup's Neovim Colorscheme
 
-...
+

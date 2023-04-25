@@ -3,14 +3,14 @@
 --
 --        ,gggg,
 --       d8" "8I                         ,dPYb,
---       88  ,dP                         IP'`Yb
+--       88  ,dP                         IP"`Yb
 --    8888888P"                          I8  8I
---       88                              I8  8'
+--       88                              I8  8"
 --       88        gg      gg    ,g,     I8 dPgg,
---  ,aa,_88        I8      8I   ,8'8,    I8dP" "8I
--- dP" "88P        I8,    ,8I  ,8'  Yb   I8P    I8
--- Yb,_,d88b,,_   ,d8b,  ,d8b,,8'_   8) ,d8     I8,
---  "Y8P"  "Y888888P'"Y88P"`Y8P' "YY8P8P88P     `Y8
+--  ,aa,_88        I8      8I   ,8"8,    I8dP" "8I
+-- dP" "88P        I8,    ,8I  ,8"  Yb   I8P    I8
+-- Yb,_,d88b,,_   ,d8b,  ,d8b,,8"_   8) ,d8     I8,
+--  "Y8P"  "Y888888P""Y88P"`Y8P" "YY8P8P88P     `Y8
 --
 
 -- This is a starter colorscheme for use with Lush,
@@ -40,9 +40,9 @@
 --
 --  or
 --
---  `:lua require('lush').ify()`
+--  `:lua require("lush").ify()`
 
-local lush = require('lush')
+local lush = require("lush")
 -- local hsl = lush.hsl
 
 local colors = {
@@ -74,19 +74,19 @@ local theme = lush(function(injected_functions)
         -- groups, mostly used for styling UI elements.
         -- Comment them out and add your own properties to override the defaults.
         -- An empty definition `{}` will clear all styling, leaving elements looking
-        -- like the 'Normal' group.
+        -- like the "Normal" group.
         -- To be able to link to a group, it must already be defined, so you may have
         -- to reorder items as you go.
         --
         -- See :h highlight-groups
         --
-        -- ColorColumn  { fg = "#FFFF00" }, -- Columns set with 'colorcolumn'
-        -- Conceal      { fg = "#FFFF00" }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
+        -- ColorColumn  { fg = "#FFFF00" }, -- Columns set with "colorcolumn"
+        -- Conceal      { fg = "#FFFF00" }, -- Placeholder characters substituted for concealed text (see "conceallevel")
         -- Cursor       { fg = "#FFFF00" }, -- Character under the cursor
-        -- lCursor      { fg = "#FFFF00" }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
+        -- lCursor      { fg = "#FFFF00" }, -- Character under the cursor when |language-mapping| is used (see "guicursor")
         -- CursorIM     { fg = "#FFFF00" }, -- Like Cursor, but used when in IME mode |CursorIM|
-        -- CursorColumn { fg = "#FFFF00" }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-        CursorLine   { bg = colors.dark_soft }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+        CursorColumn { bg = colors.dark_soft  }, -- Screen-column at the cursor, when "cursorcolumn" is set.
+        CursorLine   { bg = colors.dark_soft }, -- Screen-line at the cursor, when "cursorline" is set. Low-priority if foreground (ctermfg OR guifg) is not set.
         Directory    { fg = colors.yellow }, -- Directory names (and other special names in listings)
         DiffAdd      { fg = colors.light_green }, -- Diff mode: Added line |diff.txt|
         DiffChange   { fg = colors.yellow }, -- Diff mode: Changed line |diff.txt|
@@ -96,20 +96,20 @@ local theme = lush(function(injected_functions)
         -- TermCursor   { fg = "#FFFF00" }, -- Cursor in a focused terminal
         -- TermCursorNC { fg = "#FFFF00" }, -- Cursor in an unfocused terminal
         ErrorMsg     { fg = colors.red }, -- Error messages on the command line
-        VertSplit    { fg = colors.grey, bg = colors.dark_hard }, -- Column separating vertically splpt windows
+        -- VertSplit    { fg = colors.grey, bg = colors.dark_hard }, -- Column separating vertically splpt windows
         Folded       { }, -- Line used for closed folds
-        FoldColumn   { bg = colors.dark_hard }, -- 'foldcolumn'
+        FoldColumn   { bg = colors.dark_hard }, -- "foldcolumn"
         SignColumn   { bg = colors.dark_hard }, -- Column where |signs| are displayed
-        -- IncSearch    { fg = "#FFFF00" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+        -- IncSearch    { fg = "#FFFF00" }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
         -- Substitute   { fg = "#FFFF00" }, -- |:substitute| replacement text highlighting
-        LineNr       { fg = colors.dark_grey }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-        CursorLineNr { fg = colors.grey }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+        LineNr       { fg = colors.dark_grey }, -- Line number for ":number" and ":#" commands, and when "number" or "relativenumber" option is set.
+        CursorLineNr { fg = colors.grey }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
         MatchParen   { bg = colors.dark_grey }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-        -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
+        -- ModeMsg      { }, -- "showmode" message (e.g., "-- INSERT -- ")
         -- MsgArea      { }, -- Area for messages and cmdline
-        -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
+        -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of "display"
         -- MoreMsg      { }, -- |more-prompt|
-        NonText      { fg = colors.grey }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+        NonText      { fg = colors.grey }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
         Normal       { fg = colors.light_grey, bg = colors.dark_hard }, -- Normal text
         NormalFloat  { fg = colors.very_light_grey, bg = colors.dark_medi }, -- Normal text in floating windows.
         NormalNC     { fg = colors.very_light_grey, bg = colors.dark_hard }, -- normal text in non-current windows
@@ -119,8 +119,8 @@ local theme = lush(function(injected_functions)
         PmenuThumb   { bg = colors.dark_soft }, -- Popup menu: Thumb of the scrollbar.
         -- Question     { }, -- |hit-enter| prompt and yes/no questions
         -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-        Search       { bg = colors.yellow }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-        -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
+        Search       { bg = colors.yellow }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
+        -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
         -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -134,9 +134,9 @@ local theme = lush(function(injected_functions)
         Visual       { bg = colors.dark_soft }, -- Visual mode selection
         VisualNOS    { bg = colors.dark_soft }, -- Visual mode selection when vim is "Not Owning the Selection".
         WarningMsg   { fg = colors.yellow }, -- Warning messages
-        Whitespace   { fg = colors.dark_grey }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-        Winseparator { bg = colors.dark_hard }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
-        WildMenu     { bg = colors.yellow }, -- Current match in 'wildmenu' completion
+        Whitespace   { fg = colors.dark_grey }, -- "nbsp", "space", "tab" and "trail" in "listchars"
+        Winseparator { bg = "None" }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
+        WildMenu     { bg = colors.yellow }, -- Current match in "wildmenu" completion
 
         -- Common vim syntax groups used for all kinds of code and markup.
         -- Commented-out groups should chain up to their preferred (*) group
@@ -150,7 +150,7 @@ local theme = lush(function(injected_functions)
 
         Constant       { fg = colors.pink }, -- (*) Any constant
         String         { fg = colors.dark_green }, --   A string constant: "this is a string"
-        Character      { fg = colors.pink }, --   A character constant: 'c', '\n'
+        Character      { fg = colors.pink }, --   A character constant: "c", "\n"
         Number         { fg = colors.pink }, --   A number constant: 234, 0xff
         Boolean        { fg = colors.pink }, --   A boolean constant: TRUE, false
         Float          { fg = colors.pink }, --   A floating point constant: 2.3e10
@@ -181,7 +181,7 @@ local theme = lush(function(injected_functions)
             SpecialChar    { fg = colors.light_blue }, --   Special character in a constant
             Tag            { }, --   You can use CTRL-] on this
             Delimiter      { }, --   Character that needs attention
-            SpecialComment { fg = colors.light_blue }, --   Special things inside a comment (e.g. '\n')
+            SpecialComment { fg = colors.light_blue }, --   Special things inside a comment (e.g. "\n")
             Debug          { }, --   Debugging statements
             --
             Underlined     { gui = "underline" }, -- Text that stands out, HTML links
@@ -191,7 +191,7 @@ local theme = lush(function(injected_functions)
 
             -- These groups are for the native LSP client and diagnostic system. Some
             -- other LSP clients may use these groups, or use their own. Consult your
-            -- LSP client's documentation.
+            -- LSP client"s documentation.
 
             -- See :h lsp-highlight, some groups may not be listed, submit a PR fix to lush-template!
             --
@@ -236,9 +236,9 @@ local theme = lush(function(injected_functions)
             -- for more details see https://www.lua.org/pil/5.html
             --
             -- sym("@text.literal")
-            -- sym('@text.literal')
+            -- sym("@text.literal")
             -- sym"@text.literal"
-            -- sym'@text.literal'
+            -- sym"@text.literal"
             --
             -- For more information see https://github.com/rktjmp/lush.nvim/issues/109
 
