@@ -96,12 +96,12 @@ local theme = lush(function(injected_functions)
         -- TermCursor   { fg = "#FFFF00" }, -- Cursor in a focused terminal
         -- TermCursorNC { fg = "#FFFF00" }, -- Cursor in an unfocused terminal
         ErrorMsg     { fg = colors.red }, -- Error messages on the command line
-        -- VertSplit    { fg = colors.grey, bg = colors.dark_hard }, -- Column separating vertically splpt windows
+        VertSplit    { fg = colors.grey, bg = colors.dark_hard }, -- Column separating vertically splpt windows
         Folded       { }, -- Line used for closed folds
         FoldColumn   { bg = colors.dark_hard }, -- "foldcolumn"
         SignColumn   { bg = colors.dark_hard }, -- Column where |signs| are displayed
         -- IncSearch    { fg = "#FFFF00" }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
-        -- Substitute   { fg = "#FFFF00" }, -- |:substitute| replacement text highlighting
+        Substitute   { bg = colors.yellow }, -- |:substitute| replacement text highlighting
         LineNr       { fg = colors.dark_grey }, -- Line number for ":number" and ":#" commands, and when "number" or "relativenumber" option is set.
         CursorLineNr { fg = colors.grey }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
         MatchParen   { bg = colors.dark_grey }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -118,7 +118,7 @@ local theme = lush(function(injected_functions)
         PmenuSbar    { bg = colors.light_grey }, -- Popup menu: Scrollbar.
         PmenuThumb   { bg = colors.dark_soft }, -- Popup menu: Thumb of the scrollbar.
         -- Question     { }, -- |hit-enter| prompt and yes/no questions
-        -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+        QuickFixLine { bg = colors.yellow }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
         Search       { bg = colors.yellow }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
         -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -128,7 +128,7 @@ local theme = lush(function(injected_functions)
         -- StatusLine   { }, -- Status line of current window
         -- StatusLineNC { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
         -- TabLine      { }, -- Tab pages line, not active tab page label
-        -- TabLineFill  { }, -- Tab pages line, where there are no labels
+        TabLineFill  { }, -- Tab pages line, where there are no labels
         TabLineSel   { bg = colors.dark_hard }, -- Tab pages line, active tab page label
         Title        { fb = colors.orange }, -- Titles for output from ":set all", ":autocmd" etc.
         Visual       { bg = colors.dark_soft }, -- Visual mode selection
