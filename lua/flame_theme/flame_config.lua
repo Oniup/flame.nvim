@@ -80,11 +80,11 @@ local theme = lush(function(injected_functions)
         --
         -- See :h highlight-groups
         --
-        -- ColorColumn  { fg = "#FFFF00" }, -- Columns set with "colorcolumn"
-        -- Conceal      { fg = "#FFFF00" }, -- Placeholder characters substituted for concealed text (see "conceallevel")
-        -- Cursor       { fg = "#FFFF00" }, -- Character under the cursor
-        -- lCursor      { fg = "#FFFF00" }, -- Character under the cursor when |language-mapping| is used (see "guicursor")
-        -- CursorIM     { fg = "#FFFF00" }, -- Like Cursor, but used when in IME mode |CursorIM|
+        -- ColorColumn  {}, -- Columns set with "colorcolumn"
+        -- Conceal      {}, -- Placeholder characters substituted for concealed text (see "conceallevel")
+        -- Cursor       {}, -- Character under the cursor
+        -- lCursor      {}, -- Character under the cursor when |language-mapping| is used (see "guicursor")
+        -- CursorIM     {}, -- Like Cursor, but used when in IME mode |CursorIM|
         CursorColumn { bg = colors.dark_soft  }, -- Screen-column at the cursor, when "cursorcolumn" is set.
         CursorLine   { bg = colors.dark_soft }, -- Screen-line at the cursor, when "cursorline" is set. Low-priority if foreground (ctermfg OR guifg) is not set.
         Directory    { fg = colors.yellow }, -- Directory names (and other special names in listings)
@@ -127,7 +127,7 @@ local theme = lush(function(injected_functions)
         -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
         -- StatusLine   { }, -- Status line of current window
         -- StatusLineNC { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-        -- TabLine      { }, -- Tab pages line, not active tab page label
+        TabLine      { }, -- Tab pages line, not active tab page label
         TabLineFill  { }, -- Tab pages line, where there are no labels
         TabLineSel   { bg = colors.dark_hard }, -- Tab pages line, active tab page label
         Title        { fb = colors.orange }, -- Titles for output from ":set all", ":autocmd" etc.
