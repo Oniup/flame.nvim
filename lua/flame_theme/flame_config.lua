@@ -80,8 +80,8 @@ local theme = lush(function(injected_functions)
         --
         -- See :h highlight-groups
         --
-        -- ColorColumn  {}, -- Columns set with "colorcolumn"
-        -- Conceal      {}, -- Placeholder characters substituted for concealed text (see "conceallevel")
+        ColorColumn  { bg = color.dark_medi }, -- Columns set with "colorcolumn"
+        Conceal      { bg = color.dark_soft }, -- Placeholder characters substituted for concealed text (see "conceallevel")
         -- Cursor       {}, -- Character under the cursor
         -- lCursor      {}, -- Character under the cursor when |language-mapping| is used (see "guicursor")
         -- CursorIM     {}, -- Like Cursor, but used when in IME mode |CursorIM|
@@ -127,7 +127,7 @@ local theme = lush(function(injected_functions)
         -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
         -- StatusLine   { }, -- Status line of current window
         -- StatusLineNC { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-        TabLine      { }, -- Tab pages line, not active tab page label
+        TabLine      {}, -- Tab pages line, not active tab page label
         TabLineFill  { }, -- Tab pages line, where there are no labels
         TabLineSel   { bg = colors.dark_hard }, -- Tab pages line, active tab page label
         Title        { fb = colors.orange }, -- Titles for output from ":set all", ":autocmd" etc.
