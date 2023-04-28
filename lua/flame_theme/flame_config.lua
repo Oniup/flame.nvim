@@ -52,6 +52,7 @@ local colors = {
     very_light_green = "#A6A499",
     light_grey = "#A69A8D",
     very_light_grey = "#bfb2a4",
+    black = "#000000",
 
     dark_green = "#9aad6c",
     light_green = "#b1ca78",
@@ -80,8 +81,8 @@ local theme = lush(function(injected_functions)
         --
         -- See :h highlight-groups
         --
-        ColorColumn  { bg = color.dark_medi }, -- Columns set with "colorcolumn"
-        Conceal      { bg = color.dark_soft }, -- Placeholder characters substituted for concealed text (see "conceallevel")
+        ColorColumn  { fg = colors.light_blue, bg = colors.dark_medi }, -- Columns set with "colorcolumn"
+        Conceal      { fg = colors.black, bg = colors.dark_soft }, -- Placeholder characters substituted for concealed text (see "conceallevel")
         -- Cursor       {}, -- Character under the cursor
         -- lCursor      {}, -- Character under the cursor when |language-mapping| is used (see "guicursor")
         -- CursorIM     {}, -- Like Cursor, but used when in IME mode |CursorIM|
