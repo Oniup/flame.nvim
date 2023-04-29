@@ -114,9 +114,10 @@ local theme = lush(function(injected_functions)
         Normal       { fg = colors.light_grey, bg = colors.dark_hard }, -- Normal text
         NormalFloat  { fg = colors.very_light_grey, bg = colors.dark_medi }, -- Normal text in floating windows.
         NormalNC     { fg = colors.very_light_grey, bg = colors.dark_hard }, -- normal text in non-current windows
-        Pmenu        { fg = colors.very_light_grey, bg = colors.dark_medi }, -- Popup menu: Normal item.
+        Pmenu {},
+        -- Pmenu        { fg = colors.very_light_grey, bg = colors.dark_medi }, -- Popup menu: Normal item.
         PmenuSel     { fg = colors.very_light_grey, bg = colors.dark_soft }, -- Popup menu: Selected item.
-        PmenuSbar    { bg = colors.light_grey }, -- Popup menu: Scrollbar.
+        PmenuSbar    { bg = colors.very_light_grey }, -- Popup menu: Scrollbar.
         PmenuThumb   { bg = colors.dark_soft }, -- Popup menu: Thumb of the scrollbar.
         -- Question     { }, -- |hit-enter| prompt and yes/no questions
         QuickFixLine { bg = colors.yellow }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
