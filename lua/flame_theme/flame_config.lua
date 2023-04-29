@@ -81,8 +81,8 @@ local theme = lush(function(injected_functions)
         --
         -- See :h highlight-groups
         --
-        ColorColumn  { fg = colors.light_blue, bg = colors.dark_medi }, -- Columns set with "colorcolumn"
-        Conceal      { fg = colors.black, bg = colors.dark_soft }, -- Placeholder characters substituted for concealed text (see "conceallevel")
+        ColorColumn  { fg = colors.black, bg = colors.dark_medi }, -- Columns set with "colorcolumn"
+        Conceal      { fg = colors.yellow, bg = colors.dark_soft }, -- Placeholder characters substituted for concealed text (see "conceallevel")
         -- Cursor       {}, -- Character under the cursor
         -- lCursor      {}, -- Character under the cursor when |language-mapping| is used (see "guicursor")
         -- CursorIM     {}, -- Like Cursor, but used when in IME mode |CursorIM|
@@ -112,13 +112,13 @@ local theme = lush(function(injected_functions)
         -- MoreMsg      { }, -- |more-prompt|
         NonText      { fg = colors.grey }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
         Normal       { fg = colors.light_grey, bg = colors.dark_hard }, -- Normal text
-        NormalFloat  { fg = colors.very_light_grey, bg = colors.dark_medi }, -- Normal text in floating windows.
+        NormalFloat  { fg = colors.very_light_grey }, -- Normal text in floating windows.
         NormalNC     { fg = colors.very_light_grey, bg = colors.dark_hard }, -- normal text in non-current windows
         Pmenu {},
         -- Pmenu        { fg = colors.very_light_grey, bg = colors.dark_medi }, -- Popup menu: Normal item.
         PmenuSel     { fg = colors.very_light_grey, bg = colors.dark_soft }, -- Popup menu: Selected item.
-        PmenuSbar    { bg = colors.very_light_grey }, -- Popup menu: Scrollbar.
-        PmenuThumb   { bg = colors.dark_soft }, -- Popup menu: Thumb of the scrollbar.
+        PmenuSbar    { bg = colors.dark_soft }, -- Popup menu: Scrollbar.
+        PmenuThumb   { bg = colors.very_light_grey }, -- Popup menu: Thumb of the scrollbar.
         -- Question     { }, -- |hit-enter| prompt and yes/no questions
         QuickFixLine { bg = colors.yellow }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
         Search       { bg = colors.yellow }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
