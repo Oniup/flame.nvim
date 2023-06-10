@@ -46,9 +46,10 @@ local lush = require("lush")
 -- local hsl = lush.hsl
 
 local colors = {
-    dark_hard = "#212121",
-    dark_medi = "#302F2A",
-    dark_soft = "#3B3A35",
+    -- background1 = "#212121",
+    background1 = "#131515",
+    background2 = "#181b1a",
+    background3 = "#222625",
     very_light_green = "#A6A499",
     light_grey = "#A69A8D",
     very_light_grey = "#bfb2a4",
@@ -81,13 +82,13 @@ local theme = lush(function(injected_functions)
         --
         -- See :h highlight-groups
         --
-        ColorColumn  { fg = colors.black, bg = colors.dark_medi }, -- Columns set with "colorcolumn"
-        Conceal      { fg = colors.yellow, bg = colors.dark_soft }, -- Placeholder characters substituted for concealed text (see "conceallevel")
+        ColorColumn  { fg = colors.black, bg = colors.background2 }, -- Columns set with "colorcolumn"
+        Conceal      { fg = colors.yellow, bg = colors.background3 }, -- Placeholder characters substituted for concealed text (see "conceallevel")
         -- Cursor       {}, -- Character under the cursor
         -- lCursor      {}, -- Character under the cursor when |language-mapping| is used (see "guicursor")
         -- CursorIM     {}, -- Like Cursor, but used when in IME mode |CursorIM|
-        CursorColumn { bg = colors.dark_soft  }, -- Screen-column at the cursor, when "cursorcolumn" is set.
-        CursorLine   { bg = colors.dark_soft }, -- Screen-line at the cursor, when "cursorline" is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+        CursorColumn { bg = colors.background3  }, -- Screen-column at the cursor, when "cursorcolumn" is set.
+        CursorLine   { bg = colors.background3 }, -- Screen-line at the cursor, when "cursorline" is set. Low-priority if foreground (ctermfg OR guifg) is not set.
         Directory    { fg = colors.light_blue }, -- Directory names (and other special names in listings)
         DiffAdd      { fg = colors.light_green }, -- Diff mode: Added line |diff.txt|
         DiffChange   { fg = colors.yellow }, -- Diff mode: Changed line |diff.txt|
@@ -97,12 +98,12 @@ local theme = lush(function(injected_functions)
         -- TermCursor   { fg = "#FFFF00" }, -- Cursor in a focused terminal
         -- TermCursorNC { fg = "#FFFF00" }, -- Cursor in an unfocused terminal
         ErrorMsg     { fg = colors.red }, -- Error messages on the command line
-        VertSplit    { fg = colors.grey, bg = colors.dark_hard }, -- Column separating vertically splpt windows
+        VertSplit    { fg = colors.grey, bg = colors.background1 }, -- Column separating vertically splpt windows
         Folded       { }, -- Line used for closed folds
-        FoldColumn   { bg = colors.dark_hard }, -- "foldcolumn"
-        SignColumn   { bg = colors.dark_hard }, -- Column where |signs| are displayed
+        FoldColumn   { bg = colors.background1 }, -- "foldcolumn"
+        SignColumn   { bg = colors.background1 }, -- Column where |signs| are displayed
         -- IncSearch    { fg = "#FFFF00" }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
-        Substitute   { bg = colors.yellow }, -- |:substitute| replacement text highlighting
+        Substitute   { fg = colors.black, bg = colors.yellow }, -- |:substitute| replacement text highlighting
         LineNr       { fg = colors.dark_grey }, -- Line number for ":number" and ":#" commands, and when "number" or "relativenumber" option is set.
         CursorLineNr { fg = colors.grey }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
         MatchParen   { bg = colors.dark_grey }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -111,17 +112,16 @@ local theme = lush(function(injected_functions)
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of "display"
         -- MoreMsg      { }, -- |more-prompt|
         NonText      { fg = colors.grey }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
-        Normal       { fg = colors.light_grey, bg = colors.dark_hard }, -- Normal text
+        Normal       { fg = colors.light_grey, bg = colors.background1 }, -- Normal text
         NormalFloat  { fg = colors.very_light_grey }, -- Normal text in floating windows.
-        NormalNC     { fg = colors.very_light_grey, bg = colors.dark_hard }, -- normal text in non-current windows
-        Pmenu {},
-        -- Pmenu        { fg = colors.very_light_grey, bg = colors.dark_medi }, -- Popup menu: Normal item.
-        PmenuSel     { fg = colors.very_light_grey, bg = colors.dark_soft }, -- Popup menu: Selected item.
-        PmenuSbar    { bg = colors.dark_soft }, -- Popup menu: Scrollbar.
-        PmenuThumb   { bg = colors.very_light_grey }, -- Popup menu: Thumb of the scrollbar.
+        NormalNC     { fg = colors.very_light_grey, bg = colors.background1 }, -- normal text in non-current windows
+        Pmenu        { fg = colors.very_light_grey, bg = colors.background2 }, -- Popup menu: Normal item.
+        PmenuSel     { fg = colors.very_light_grey, bg = colors.background3 }, -- Popup menu: Selected item.
+        PmenuSbar    { bg = colors.background3 }, -- Popup menu: Scrollbar.
+        PmenuThumb   { fg=  colors.black, bg = colors.very_light_grey }, -- Popup menu: Thumb of the scrollbar.
         -- Question     { }, -- |hit-enter| prompt and yes/no questions
-        QuickFixLine { bg = colors.yellow }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-        Search       { bg = colors.yellow }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
+        QuickFixLine { fg = colors.black, bg = colors.yellow }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+        Search       { fg = colors.black, bg = colors.yellow }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
         -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
         -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
         -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -131,14 +131,14 @@ local theme = lush(function(injected_functions)
         -- StatusLineNC { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
         TabLine      {}, -- Tab pages line, not active tab page label
         TabLineFill  { }, -- Tab pages line, where there are no labels
-        TabLineSel   { bg = colors.dark_hard }, -- Tab pages line, active tab page label
+        TabLineSel   { bg = colors.background1 }, -- Tab pages line, active tab page label
         Title        { fb = colors.orange }, -- Titles for output from ":set all", ":autocmd" etc.
-        Visual       { bg = colors.dark_soft }, -- Visual mode selection
-        VisualNOS    { bg = colors.dark_soft }, -- Visual mode selection when vim is "Not Owning the Selection".
-        WarningMsg   { fg = colors.yellow }, -- Warning messages
+        Visual       { bg = colors.background3 }, -- Visual mode selection
+        VisualNOS    { bg = colors.background3 }, -- Visual mode selection when vim is "Not Owning the Selection".
         Whitespace   { fg = colors.dark_grey }, -- "nbsp", "space", "tab" and "trail" in "listchars"
+        WarningMsg   { fg = colors.yellow }, -- Warning messages
         Winseparator { bg = "None" }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
-        WildMenu     { bg = colors.yellow }, -- Current match in "wildmenu" completion
+        WildMenu     { fg = colors.black, bg = colors.yellow }, -- Current match in "wildmenu" completion
 
         -- Common vim syntax groups used for all kinds of code and markup.
         -- Commented-out groups should chain up to their preferred (*) group
@@ -202,7 +202,7 @@ local theme = lush(function(injected_functions)
             -- LspReferenceWrite           { } , -- Used for highlighting "write" references
             -- LspCodeLens                 { } , -- Used to color the virtual text of the codelens. See |nvim_buf_set_extmark()|.
             -- LspCodeLensSeparator        { } , -- Used to color the seperator between two or more code lens.
-            LspSignatureActiveParameter { bg = colors.dark_soft } , -- Used to highlight the active parameter in the signature help. See |vim.lsp.handlers.signature_help()|.
+            LspSignatureActiveParameter { bg = colors.background3 } , -- Used to highlight the active parameter in the signature help. See |vim.lsp.handlers.signature_help()|.
 
             -- See :h diagnostic-highlights, some groups may not be listed, submit a PR fix to lush-template!
             --
