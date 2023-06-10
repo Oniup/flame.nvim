@@ -191,6 +191,16 @@ local theme = lush(function(injected_functions)
             Error          { }, -- Any erroneous construct
             Todo           { bg = colors.grey }, -- Anything that needs extra attention; mostly the keywords TODO: FIXME and XXX
 
+            TelescopeNormal         { bg = colors.background2 },
+            TelescopeBorder         { fg = colors.background2 , bg = colors.background2 },
+            TelescopePromptPrefix   { fg = colors.red, bg = colors.background3 },
+            TelescopePromptNormal   { bg = colors.background3 },
+            TelescopePromptTitle    { fg = colors.black, bg = colors.orange },
+            TelescopePromptBorder   { fg = colors.background3, bg = colors.background3 },
+            TelescopePreviewTitle   { fg = colors.black, bg = colors.red },
+            TelescopeResultsTitle   { fg = colors.background2, bg = colors.background2 },
+            TelescopeSelectionCaret { fg = colors.background2, bg = colors.background2 },
+
             -- These groups are for the native LSP client and diagnostic system. Some
             -- other LSP clients may use these groups, or use their own. Consult your
             -- LSP client"s documentation.
