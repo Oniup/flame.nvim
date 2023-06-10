@@ -201,6 +201,9 @@ local theme = lush(function(injected_functions)
             TelescopeResultsTitle   { fg = colors.background2, bg = colors.background2 },
             TelescopeSelectionCaret { fg = colors.background2, bg = colors.background2 },
 
+            CmpItemAbbrMatch        { fg = colors.yellow },
+            CmpItemAbbrMatchFuzzy   { fg = colors.orange },
+
             -- These groups are for the native LSP client and diagnostic system. Some
             -- other LSP clients may use these groups, or use their own. Consult your
             -- LSP client"s documentation.
