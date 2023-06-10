@@ -197,7 +197,7 @@ local theme = lush(function(injected_functions)
             TelescopePromptNormal   { bg = colors.background3 },
             TelescopePromptTitle    { fg = colors.black, bg = colors.orange },
             TelescopePromptBorder   { fg = colors.background3, bg = colors.background3 },
-            TelescopePreviewTitle   { fg = colors.black, bg = colors.red },
+            TelescopePreviewTitle   { fg = colors.black, bg = colors.yellow },
             TelescopeResultsTitle   { fg = colors.background2, bg = colors.background2 },
             TelescopeSelectionCaret { fg = colors.background2, bg = colors.background2 },
 
