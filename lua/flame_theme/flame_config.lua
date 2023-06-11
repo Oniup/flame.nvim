@@ -81,7 +81,7 @@ local theme = lush(function(injected_functions)
         --
         -- See :h highlight-groups
         --
-        ColorColumn { fg = colors.black, bg = colors.background2 },   -- Columns set with "colorcolumn"
+        ColorColumn { fg = colors.background3, bg = colors.background3 },   -- Columns set with "colorcolumn"
         Conceal { fg = colors.yellow, bg = colors.background3 },      -- Placeholder characters substituted for concealed text (see "conceallevel")
         -- Cursor       {}, -- Character under the cursor
         -- lCursor      {}, -- Character under the cursor when |language-mapping| is used (see "guicursor")
