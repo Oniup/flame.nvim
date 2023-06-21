@@ -65,6 +65,7 @@ local colors = {
     yellow = "#f6ba41",
 }
 
+
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
@@ -330,7 +331,7 @@ local theme = lush(function(injected_functions)
         sym "@type.definition" { fg = colors.yellow },                                  -- Typedef
         sym "@storageclass" { fg = colors.yellow },                                     -- StorageClass
         sym "@structure" { fg = colors.yellow },                                        -- Structure
-        sym "@namespace" { fg = colors.yellow },                                        -- Identifier
+        sym "@namespace" { fg = colors.dark_green },                                        -- Identifier
         -- sym"@include"           { fg = "#FFFF00" }, -- Include
         -- sym"@preproc"           { fg = "#FFFF00" }, -- PreProc
         -- sym"@debug"             { fg = "#FFFF00" }, -- Debug
